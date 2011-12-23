@@ -10,13 +10,12 @@ S3_BUCKET="heroku-buildpack-liquidsoap"
 
 # parse and derive params
 BUILD_DIR=$1
-CACHE_DIR=$2
 
 # s3 package
 LIQUIDSOAP_PACKAGE="http://${S3_BUCKET}.s3.amazonaws.com/liquidsoap-${LIQUIDSOAP_VERSION}.tgz"
 
 # vendor directory
-VENDORED_LIQUIDSOAP="$CACHE_DIR/.liquidsoap"
+VENDORED_LIQUIDSOAP="$BUILD_DIR/.liquidsoap"
 
 # download and unpack package
 echo "-----> Vendoring liquidsoap $LIQUIDSOAP_VERSION"
