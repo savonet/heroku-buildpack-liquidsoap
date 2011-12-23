@@ -4,7 +4,6 @@
 cat <<EOF
 ---
 config_vars:
-  LIQUIDSOAP_BASE_DIR: .liquidsoap
   LD_LIBRARY_PATH: .liquidsoap/ld
   PATH: .liquidsoap/bin:/usr/local/bin:/usr/bin:/bin
 EOF
